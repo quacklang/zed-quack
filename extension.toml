@@ -8,4 +8,4 @@ repository = "https://github.com/quacklang/zed-quack"
 
 [grammars.quack]
 repository = "https://github.com/quacklang/tree-sitter-quack"
-rev = "624975a4ee83cd0e261a45e73cd3056a27fb4842"
+rev = "d569c14df642817c21da089e1e57135a41a0d583"
