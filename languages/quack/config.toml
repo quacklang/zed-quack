@@ -1,0 +1,9 @@
+name = "Quack"
+grammar = "quack"
+path_suffixes = ["q"]
+line_comments = ["// "]
+tab_size = 4
+
+[brackets]
+opening = ["(", "[", "{", "\""]
+closing = [")", "]", "}", "\""]
