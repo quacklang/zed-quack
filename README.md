@@ -64,4 +64,4 @@ If you develop on WSL but run Zed on Windows:
 
 ## License
 
-MIT
+Apache-2.0
