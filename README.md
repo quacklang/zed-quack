@@ -27,32 +27,17 @@ In Zed: Extensions panel > search "Quack" > Install.
 
 If you develop on WSL but run Zed on Windows:
 
-1. **Edit** files in the WSL monorepo (`~/Code/quack/extensions/zed/`).
+1. **Clone both repos** on the Windows side:
 
-2. **Sync** to a Windows-native path after changes:
-
-   ```sh
-   # Adjust the Windows username
-   rsync -av --delete \
-     ~/Code/quack/extensions/tree-sitter-quack/ \
-     /mnt/c/Users/<you>/Code/tree-sitter-quack/
-
-   rsync -av --delete \
-     ~/Code/quack/extensions/zed/ \
-     /mnt/c/Users/<you>/Code/quack-zed/
+   ```powershell
+   cd C:\Users\<you>\Code
+   git clone https://github.com/quacklang/tree-sitter-quack.git
+   git clone https://github.com/quacklang/zed-quack.git
    ```
 
-3. **Point the grammar at the local copy.** Edit `extension.toml` on the Windows side:
+2. **Install in Zed:** Command palette > "zed: install dev extension" > select `C:\Users\<you>\Code\zed-quack`.
 
-   ```toml
-   [grammars.quack]
-   repository = "file:///C:/Users/<you>/Code/tree-sitter-quack"
-   rev = "HEAD"
-   ```
-
-4. **Install in Zed:** Command palette > "zed: install dev extension" > select `C:\Users\<you>\Code\quack-zed`.
-
-5. **After changes:** re-sync (step 2) and re-install (step 4). There is no hot-reload.
+3. **After changes:** push from WSL, pull on the Windows clones, and re-run "Install Dev Extension". There is no hot-reload.
 
 ### Requirements on Windows
 
