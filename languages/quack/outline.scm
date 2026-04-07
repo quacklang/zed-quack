@@ -22,6 +22,10 @@
   "on" @context
   type: (_) @name) @item
 
+(type_alias_declaration
+  "type" @context
+  name: (type_identifier) @name) @item
+
 (test_declaration
   "test" @context
   name: (string_literal) @name) @item
