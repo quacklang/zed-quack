@@ -18,8 +18,8 @@
   "interface" @context
   name: (type_identifier) @name) @item
 
-(on_declaration
-  "on" @context
+(for_declaration
+  "for" @context
   type: (_) @name) @item
 
 (type_alias_declaration
