@@ -23,6 +23,17 @@ In Zed: Extensions panel > search "Quack" > Install.
 - **Code outline** — functions, structs, enums, interfaces, `on` blocks, tests
 - **Auto-indentation** — indent/outdent on `{}`
 
+## Roadmap
+
+This extension currently provides grammar-level features via tree-sitter. The intent is to also serve as the home for Quack's LSP integration in Zed, which will add:
+
+- **Go-to-definition** — jump to function, struct, and enum declarations
+- **Hover type info** — display inferred types and capabilities on hover
+- **Inline diagnostics** — compiler errors and warnings as you type
+- **Completions** — context-aware suggestions for methods, fields, and types
+
+The LSP server itself will live in the main `quack` repository (likely a `quack-lsp` crate). This extension will configure Zed to use it once it exists.
+
 ## Development (WSL + Windows)
 
 If you develop on WSL but run Zed on Windows:
