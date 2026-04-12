@@ -19,8 +19,6 @@
   "error"
   "break"
   "defer"
-  "use"
-  "package"
   "test"
   "unsafe"
   "extern"
@@ -48,7 +46,7 @@
 ; Visibility modifiers
 [
   "public"
-  "package"
+  "internal"
 ] @keyword.modifier
 
 ; Concurrency keywords
@@ -200,6 +198,3 @@
 (test_declaration
   name: (string_literal) @string)
 
-; Module path in use declarations
-(use_declaration
-  (module_path) @module)
