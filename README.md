@@ -34,6 +34,18 @@ This extension currently provides grammar-level features via tree-sitter. The in
 
 The LSP server itself will live in the main `quack` repository (likely a `quack-lsp` crate). This extension will configure Zed to use it once it exists.
 
+## Updating the grammar
+
+The `grammars/quack/` directory is a clone of [tree-sitter-quack](https://github.com/quacklang/tree-sitter-quack). Zed expects the grammar source to live at this path. It is not a submodule — it is a standalone clone that must be kept in sync manually.
+
+To pull the latest grammar:
+
+```sh
+git -C grammars/quack pull
+```
+
+After updating, commit the new subproject reference in this repo and re-install the dev extension in Zed.
+
 ## Development (WSL + Windows)
 
 If you develop on WSL but run Zed on Windows:
